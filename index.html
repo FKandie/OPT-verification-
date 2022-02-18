@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+function randomValue()
+{
+var otp=Math.round(Math.random()*10000);
+t1.value=otp;
+t1.style.background="blue";
+t1.style.resize="none";
+t1.style.fontFamily="arial black";
+t1.style.color="white";
+t1.style.textAlign="center";
+t1.style.border="none";
+}
+function match1()
+{
+if(t2.value==t1.value)
+alert("Verification Done! ");
+else
+alert("Invalid verification code.Try Again");
+}
+</script>
+
+<style type="text/css">
+body{
+background-image:url(sky.jpg);
+background-size: cover;
+background-attachment: fixed;
+}
+.content{
+background: white;
+width: 50%;
+padding: 40px;
+margin: 100px auto;
+}
+</style>
+</head>
+</head>
+<body onLoad="randomValue()" background="12.jpg">
+<center>
+<textarea name="t1" id="t1" cols="5" rows="1" disabled="disabled">
+</textarea>
+</center>
+<center>
+<h1>Enter Verification Code:</h1><input type="text" name="t2" id="t2"/>
+<input type="button" value="OK" name="btn" id="btn" onClick="match1();"/>
+</center>
+</body>
+</html>
